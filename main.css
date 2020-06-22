@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
+
+
+.pet-image {
+  width: 15vh;
+  height: 15vh;
+}
