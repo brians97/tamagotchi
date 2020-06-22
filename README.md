@@ -1,12 +1,12 @@
-# tomagotchi-pet
+# tamagotchi-pet
 
-## What is a Tomagotchi Pet?
+## What is a Tamagotchi Pet?
 
 This is your personal virtual pet a Leopard Tech-O. Play with it, feed it, and make sure it gets it's sleep. Once any of these 3 metrics hit the highest scale (10) it will die. So be sure to take care of it.
 
 ## User Story
 
-#### Creating the Tomagotchi Pet
+#### Creating the Tamagotchi Pet
 
 Create a Class for Leopard Tech-O with attributes of boredom, hunger, and sleepiness. Add the scales to the attributes starting at scale 5 for each. Add an attribute of Age, let it increase the age number every 5 minutes. If sclae reaches 10, then the pet dies. Add the image of the pet.
 
