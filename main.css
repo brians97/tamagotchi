@@ -3,8 +3,40 @@
 }
 
 
+.pet-name button {
+  float: center;
+  font-size: 12px;
+  display: inline-block;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #1e2835;
+  border-color: #f1f1f1;
+  color: #fafafa;
+}
 
 .pet-image {
-  width: 15vh;
   height: 15vh;
+}
+
+.game-dasboard {
+  float: center;
+  padding: 20px;
+}
+
+.buttons-container {
+  margin-top: 20px;
+}
+
+.buttons-container button {
+  width: 100px;
+  margin-right: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  float: center;
+  border-radius: 20px;
+  background-color: #1e2835;
+  border-color: #f1f1f1;
+  color: #fafafa;
 }
