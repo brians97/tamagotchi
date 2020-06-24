@@ -1,62 +1,69 @@
+
+
 // Pet Object
 class Pet {
   constructor(name, age, boredom, hunger, sleepiness) {
     this.name = name;
-    this.age = age || 0;
-    this.boredom = boredom || 5;
-    this.hunger = hunger || 5;
-    this.sleepiness = sleepiness || 5;
+    this.age = age;
+    this.boredom = boredom || 10;
+    this.hunger = hunger || 10;
+    this.sleepiness = sleepiness || 10;
   }
 
   // Increase Age
 
 
 }
-
 let tamagotchi = new Pet('Leopard Tech-O');
 
+boredom = 10
+hunger = 10
+sleepiness = 10
 
-updatePetAttributesInHtml();
+function Loop(time = 2) {
+  let totalAttributes = boredom + hunger + sleepiness;
 
-$('#play-button').click(clickedPlayButton);
-$('#feed-button').click(clickedFeedButton);
-$('#sleep-button').click(clickedSleepButton);
-
-
-
-function clickedPlayButton() {
-  tamagotchi[this.boredom] = tamagotchi[this.boredom] - 1;
-  tamagotchi[this.sleepiness] = [this.sleepiness] + 2;
-  document.getElementById('boredom-scale').innerText = `${this.boredom}`;
-  console.log('it works..');
-}
-
-function clickedFeedButton() {
-  tamagotchi[this.hunger] = tamagotchi[this.hunger] - 1;
-  tamagotchi[this.sleepiness] = tamagotchi[this.sleepiness] + 1;
-  document.getElementById('hunger-scale').innerText = `${this.hunger}`;
-}
-
-function clickedSleepButton() {
-  tamagotchi[this.hunger] = tamagotchi[this.hunger] - 1;
-  tamagotchi[this.sleepiness] = tamagotchi[this.sleepiness] + 1;
-  document.getElementById('sleepiness-scale').innerText = `${this.sleepiness}`;
-}
-
-
-function attributesNum() {
-  if (tamagotchi[this.hunger] > 1) {
-    tamagotchi[this.hunger] = 1;
+  if (boredom <= 0 || hunger <= 0 || sleepiness <= 0) {
   }
+
+  boredom = boredom - parseInt(time);
+  hunger = hunger - parseInt(time);
+  sleepiness = sleepiness - parseInt(time);
+
+  $('#play-button').click(Play);
+  $('#feed-button').click(Feed);
+  $('#sleep-button').click(Sleep);
+
+
+  $('#boredom-scale').text(tamagotchi[`${boredom}`]);
+  $('#hunger-scale').text(tamagotchi[`${hunger}`]);
+  $('#sleepiness-scale').text(tamagotchi[`${sleepiness}`]);
 }
 
-function petAttributesInHtml() {
-  $('#boredom-scale').text(tamagotchi[`${this.boredom}`]);
-  $('#hunger-scale').text(tamagotchi[`${this.hunger}`]);
-  $('#sleepiness-scale').text(tamagotchi[`${this.sleepiness}`]);
+function StartGame() {
+  let timeGame = setInterval(Loop, 1000);
+}
+
+function Play() {
+  boredom = 10;
+  $('#boredom-scale').text(tamagotchi[`${boredom}`]);
+  // $('#play-button').click(Play);
+}
+
+function Feed() {
+  hunger = 10;
+  $('#hunger-scale').text(tamagotchi[`${hunger}`]);
+  // $('#feed-button').click(Feed);
+}
+
+function Sleep() {
+  sleepiness = 10;
+  $('#sleepiness-scale').text(tamagotchi[`${sleepiness}`]);
+  // $('#sleep-button').click(Sleep);
 }
 
 
+StartGame();
 
 
 
