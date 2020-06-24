@@ -16,6 +16,7 @@ class Pet {
 let tamagotchi = new Pet('Leopard Tech-O');
 
 
+updatePetAttributesInHtml();
 
 $('#play-button').click(clickedPlayButton);
 $('#feed-button').click(clickedFeedButton);
@@ -43,6 +44,11 @@ function clickedSleepButton() {
 }
 
 
+function attributesNum() {
+  if (tamagotchi[this.hunger] > 1) {
+    tamagotchi[this.hunger] = 1;
+  }
+}
 
 function petAttributesInHtml() {
   $('#boredom-scale').text(tamagotchi[`${this.boredom}`]);
