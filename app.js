@@ -1,6 +1,6 @@
 // Pet Object
 class Pet {
-  constructor(name, age=0, boredom=5, hunger=5, sleepiness=5) {
+  constructor(name, age, boredom, hunger, sleepiness) {
     this.name = name;
     this.age = age || 0;
     this.boredom = boredom || 5;
@@ -10,33 +10,18 @@ class Pet {
 
   // Increase Age
 
-  increaseAge() {
-    this.age++;
-    if ()
-  }
-
 
 }
 
+let tamagotchi = new Pet('Leopard Tech-O');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function petAttributesInHtml() {
+  $('#boredom-scale').text(tamagotchi[`${this.boredom}`]);
+  $('#hunger-scale').text(tamagotchi[`${this.hunger}`]);
+  $('#sleepiness-scale').text(tamagotchi[`${this.sleepiness}`]);
+}
 
 
 

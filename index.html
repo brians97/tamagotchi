@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script defer src="app.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
   <title>Tamagotchi</title>
@@ -40,7 +41,7 @@
       <div>
         Age: 
         <strong>
-          <span class="pet-age">0</span>
+          <span id="pet-age">0</span>
         </strong>
       </div>
     </section>
@@ -51,32 +52,32 @@
       <div>
         Boredom: 
         <strong>
-          <span class="boredom-scale">5</span>
+          <span id="boredom-scale">5</span>
         </strong>
       </div>
 
       <div>
         Hunger: 
         <strong>
-          <span class="hunger-scale">5</span>
+          <span id="hunger-scale">5</span>
         </strong>
       </div>
 
       <div>
         Sleepiness: 
         <strong>
-          <span class="sleepiness-scale">5</span>
+          <span id="sleepiness-scale">5</span>
         </strong>
       </div>
 
       <div class="buttons-container">
-        <button class="play-button">
+        <button id="play-button">
           PLAY
         </button>
-        <button class="feed-button">
+        <button id="feed-button">
           FEED
         </button>
-        <button class="sleep-button">
+        <button id="sleep-button">
           SLEEP
         </button>
       </div>
