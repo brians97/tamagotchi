@@ -3,9 +3,9 @@ class Pet {
   constructor(name, age, boredom, hunger, sleepiness) {
     this.name = name;
     this.age = age;
-    this.boredom = boredom;
-    this.hunger = hunger;
-    this.sleepiness = sleepiness;
+    this.boredom = boredom || 10;
+    this.hunger = hunger || 10;
+    this.sleepiness = sleepiness || 10;
   }
 
   // Increase Age
@@ -13,10 +13,6 @@ class Pet {
 
 }
 let tamagotchi = new Pet('Leopard Tech-O');
-
-this.boredom = 10;
-this.hunger = 10;
-this.sleepiness = 10;
 
 function Loop(time = 2) {
 
@@ -30,9 +26,10 @@ function Loop(time = 2) {
   this.hunger = this.hunger - parseInt(time);
   this.sleepiness = this.sleepiness - parseInt(time);
 
-  $('#play-button').click(Play);
-  $('#feed-button').click(Feed);
-  $('#sleep-button').click(Sleep);
+// Event Listener
+  $('#play-button').click(playAttr);
+  $('#feed-button').click(feedAttr);
+  $('#sleep-button').click(sleepAttr);
 
 
   $('#boredom-scale').text(tamagotchi[`${this.boredom}`]);
@@ -45,30 +42,30 @@ function startGame() {
   this.boredom = 10;
   this.hunger = 10;
   this.sleepiness = 10;
-  // updateGameAttributes();
+  updateGameAttributes();
 }
 
-// function updateGameAttributes() {
-//   timeGame.text('boredom');
-// }
+function updateGameAttributes() {
+  $('#boredom-scale').text(timeGame);
+}
 
 
-function Play() {
+function playAttr() {
   this.boredom = 10;
   $('#boredom-scale').text(tamagotchi[`${this.boredom}`]);
-  // $('#play-button').click(Play);
+  // $('#play-button').click(playAttr);
 }
 
-function Feed() {
+function feedAttr() {
   this.hunger = 10;
   $('#hunger-scale').text(tamagotchi[`${this.hunger}`]);
-  // $('#feed-button').click(Feed);
+  // $('#feed-button').click(feedAttr);
 }
 
-function Sleep() {
+function sleepAttr() {
   this.sleepiness = 10;
   $('#sleepiness-scale').text(tamagotchi[`${this.sleepiness}`]);
-  // $('#sleep-button').click(Sleep);
+  // $('#sleep-button').click(sleepAttr);
 }
 
 
