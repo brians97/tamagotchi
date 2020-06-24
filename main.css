@@ -12,7 +12,7 @@
   cursor: pointer;
   background-color: #1e2835;
   border-color: #f1f1f1;
-  color: #fafafa;
+  color: gold;
 }
 
 .pet-image {
@@ -39,5 +39,5 @@
   border-radius: 20px;
   background-color: #1e2835;
   border-color: #f1f1f1;
-  color: #fafafa;
+  color: gold;
 }

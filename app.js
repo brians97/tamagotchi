@@ -23,7 +23,7 @@ function Loop(time = 2) {
   let totalAttributes = this.boredom + this.hunger + this.sleepiness;
 
   if (this.boredom <= 0 || this.hunger <= 0 || this.sleepiness <= 0) {
-    // let petDied = prompt(`${this.name} has died...Refresh to play again.`);
+    // let petDead = prompt(`${this.name} has died...Refresh to play again.`);
   }
 
   this.boredom = this.boredom - parseInt(time);
@@ -45,28 +45,28 @@ function startGame() {
   this.boredom = 10;
   this.hunger = 10;
   this.sleepiness = 10;
-  updateGameAttributes();
+  // updateGameAttributes();
 }
 
-function updateGameAttributes() {
-  timeGame.text('boredom');
-}
+// function updateGameAttributes() {
+//   timeGame.text('boredom');
+// }
 
 
 function Play() {
-  boredom = 10;
+  this.boredom = 10;
   $('#boredom-scale').text(tamagotchi[`${this.boredom}`]);
   // $('#play-button').click(Play);
 }
 
 function Feed() {
-  hunger = 10;
+  this.hunger = 10;
   $('#hunger-scale').text(tamagotchi[`${this.hunger}`]);
   // $('#feed-button').click(Feed);
 }
 
 function Sleep() {
-  sleepiness = 10;
+  this.sleepiness = 10;
   $('#sleepiness-scale').text(tamagotchi[`${this.sleepiness}`]);
   // $('#sleep-button').click(Sleep);
 }
