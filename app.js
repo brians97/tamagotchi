@@ -7,10 +7,23 @@ class Pet {
     this.hunger = hunger || 0;
     this.sleepiness = sleepiness || 0;
   }
-
-  // Increase Age
 }
-let tamagotchi = new Pet('Leopard Tech-O');
+let tamagotchi = new Pet();
+
+
+// function printName() {
+//   const addText = $('input:text').val();
+
+//   const updateText = $('#print-name').text(`${tamagotchi.name}`);
+  
+//   const newName = `${addText}`;
+
+//   (updateText).appendTo(newName);
+
+//   console.log('clicked');
+//   console.log(tamagotchi);
+
+// }
 
 
   // if (tamagotchi.boredom >= 10 || tamagotchi.hunger >= 10 || tamagotchi.sleepiness >= 10) {
@@ -37,11 +50,10 @@ function startGame() {
     playAttr();
     feedAttr();
     sleepAttr();
-    // if (tamagotchi.boredom >= 11 || tamagotchi.hunger >= 11 || tamagotchi.sleepiness >= 11) {
-    // alert(`${tamagotchi.name} has died...Refresh to play again.`);
-    // return;
-    // }
-    }, 1000);
+    if (tamagotchi.boredom >= 10 || tamagotchi.hunger >= 10 || tamagotchi.sleepiness >= 10) {
+      clearInterval(timeGame);
+    }
+  }, 1500);
 }
     // usePlayAttr();
 
@@ -66,7 +78,6 @@ function sleepAttr() {
 function usePlayAttr() {
   tamagotchi.boredom--;
   $('#boredom-scale').text(`${tamagotchi.boredom}`);
-  console.log(tamagotchi);
 }
 
 function useFeedAttr() {
@@ -83,6 +94,15 @@ function useSleepAttr() {
 $('#play-button').on('click', usePlayAttr);
 $('#feed-button').on('click', useFeedAttr);
 $('#sleep-button').on('click', useSleepAttr);
+
+// $('#name-button').on('click', printName);
+
+
+
+
+
+
+
 
 
 
