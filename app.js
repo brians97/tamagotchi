@@ -51,6 +51,7 @@ function startGame() {
     feedAttr();
     sleepAttr();
     if (tamagotchi.boredom >= 10 || tamagotchi.hunger >= 10 || tamagotchi.sleepiness >= 10) {
+      $('#death-message').text(`${tamagotchi.name} has died.`);
       clearInterval(timeGame);
     }
   }, 1500);
