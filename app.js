@@ -13,9 +13,10 @@ class Pet {
 let tamagotchi = new Pet('Leopard Tech-O');
 
 
-  if (this.boredom >= 10 || this.hunger >= 10 || this.sleepiness >= 10) {
-    let petDead = prompt(`${this.name} has died...Refresh to play again.`);
-  }
+  // if (tamagotchi.boredom >= 10 || tamagotchi.hunger >= 10 || tamagotchi.sleepiness >= 10) {
+  //   prompt(`${tamagotchi.name} has died...Refresh to play again.`);
+  // }
+
 
 // // Event Listener
 //   $('#play-button').click(playAttr);
@@ -36,28 +37,52 @@ function startGame() {
     playAttr();
     feedAttr();
     sleepAttr();
+    // if (tamagotchi.boredom >= 11 || tamagotchi.hunger >= 11 || tamagotchi.sleepiness >= 11) {
+    // alert(`${tamagotchi.name} has died...Refresh to play again.`);
+    // return;
+    // }
     }, 1000);
 }
+    // usePlayAttr();
 
 function playAttr() {
   tamagotchi.boredom++;
   $('#boredom-scale').text(`${tamagotchi.boredom}`);
-  $('#play-button').click(playAttr);
-  console.log(tamagotchi);
 
 }
 
 function feedAttr() {
   tamagotchi.hunger++;
   $('#hunger-scale').text(`${tamagotchi.hunger}`);
-  $('#feed-button').click(feedAttr);
 }
 
 function sleepAttr() {
   tamagotchi.sleepiness++;
   $('#sleepiness-scale').text(`${tamagotchi.sleepiness}`);
-  $('#sleep-button').click(sleepAttr);
 }
+
+
+
+function usePlayAttr() {
+  tamagotchi.boredom--;
+  $('#boredom-scale').text(`${tamagotchi.boredom}`);
+  console.log(tamagotchi);
+}
+
+function useFeedAttr() {
+  tamagotchi.hunger--;
+  $('#hunger-scale').text(`${tamagotchi.hunger}`);
+}
+
+function useSleepAttr() {
+  tamagotchi.sleepiness--;
+  $('#sleepiness-scale').text(`${tamagotchi.sleepiness}`);
+}
+
+
+$('#play-button').on('click', usePlayAttr);
+$('#feed-button').on('click', useFeedAttr);
+$('#sleep-button').on('click', useSleepAttr);
 
 
 
