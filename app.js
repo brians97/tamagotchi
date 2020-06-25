@@ -2,7 +2,7 @@
 class Pet {
   constructor(name, age, boredom, hunger, sleepiness) {
     this.name = name;
-    this.age = age;
+    this.age = age || 0;
     this.boredom = boredom || 0;
     this.hunger = hunger || 0;
     this.sleepiness = sleepiness || 0;
@@ -11,25 +11,10 @@ class Pet {
 let tamagotchi = new Pet();
 
 
-// function printName() {
-//   const addText = $('input:text').val();
-
-//   const updateText = $('#print-name').text(`${tamagotchi.name}`);
-  
-//   const newName = `${addText}`;
-
-//   (updateText).appendTo(newName);
-
-//   console.log('clicked');
-//   console.log(tamagotchi);
-
-// }
-
-
-  // if (tamagotchi.boredom >= 10 || tamagotchi.hunger >= 10 || tamagotchi.sleepiness >= 10) {
-  //   prompt(`${tamagotchi.name} has died...Refresh to play again.`);
-  // }
-
+function printName() {
+  const addText = $('input:text').val();
+  $('#print-name').text(addText);
+}
 
 // // Event Listener
 //   $('#play-button').click(playAttr);
@@ -42,21 +27,36 @@ let tamagotchi = new Pet();
 //   $('#sleepiness-scale').text(tamagotchi[`${this.sleepiness}`]);
 // }
 
-
 let timeGame;
 
 function startGame() {
   timeGame = setInterval(function() {
+    tamagotchi.age++;
     playAttr();
     feedAttr();
     sleepAttr();
+    ageIncrease(tamagotchi.age);
+    console.log(tamagotchi.age);
     if (tamagotchi.boredom >= 10 || tamagotchi.hunger >= 10 || tamagotchi.sleepiness >= 10) {
       $('#death-message').text(`${tamagotchi.name} has died.`);
       clearInterval(timeGame);
     }
   }, 1500);
 }
-    // usePlayAttr();
+
+
+let ageField = 0;
+
+function ageIncrease(time) {
+  if (time % 5 === 0) {
+    ageField += 1;
+    $('#pet-age').text(ageField);
+  }
+}
+
+
+
+
 
 function playAttr() {
   tamagotchi.boredom++;
@@ -96,7 +96,7 @@ $('#play-button').on('click', usePlayAttr);
 $('#feed-button').on('click', useFeedAttr);
 $('#sleep-button').on('click', useSleepAttr);
 
-// $('#name-button').on('click', printName);
+$('#name-button').on('click', printName);
 
 
 
