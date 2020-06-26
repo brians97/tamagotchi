@@ -17,12 +17,15 @@
 
 .pet-image {
   height: 15vh;
+  position: relative;
 }
 
 .game-dasboard {
   float: center;
-  padding: 20px;
+  padding: 0;
 }
+
+
 
 .buttons-container {
   margin-top: 20px;
@@ -34,8 +37,8 @@
   text-align: center;
   display: inline-block;
   font-size: 12px;
+  position: relative;
   cursor: pointer;
-  float: center;
   border-radius: 20px;
   background-color: #1e2835;
   border-color: #f1f1f1;
