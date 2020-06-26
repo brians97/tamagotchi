@@ -27,7 +27,9 @@ When the pet dies stop the attributes and age from increasing with text saying "
 
 Add a background image where your pet will live in. Maybe add a button to change scenery within 3 background images?
 
+## Wireframs
 
+![wireframe](./assets/wireframe.png.HEIC)
 
 ## Bonus Add-Ons ToDO
 
