@@ -28,6 +28,19 @@ header {
   background-size: contain;
 }
 
+#screen {
+  position: absolute;
+  width: 140px;
+  height: 130px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+}
+
+
 input {
   box-sizing: border-box;
   width: 25%;
@@ -36,16 +49,17 @@ input {
 
 .pet-container {
   height: 300px; 
+  display: flex;
+  align-items: center;
 }
 
 
 .pet-image {
   background-size: contain;
-  top: 42%;
-  left: 44%;
   height: 15vh;
-  position: absolute;
   display: block;
+  margin-top: 30px;
+  margin-bottom: 8px;
   margin-left: auto;
   margin-right: auto;
   animation: bounce; 

@@ -28,7 +28,6 @@ function startGame() {
     feedAttr();
     sleepAttr();
     ageIncrease(tamagotchi.age);
-    console.log(tamagotchi.age);
     if (tamagotchi.boredom >= 10 || tamagotchi.hunger >= 10 || tamagotchi.sleepiness >= 10) {
       $('#death-message').text(`${addName} has died.`);
       clearInterval(timeGame);
@@ -84,6 +83,7 @@ function useFeedAttr() {
 function useSleepAttr() {
   tamagotchi.sleepiness--;
   $('#sleepiness-scale').text(`${tamagotchi.sleepiness}`);
+  $('#sleep-message').text(` ${addName} is sleeping`);
 }
 
 
