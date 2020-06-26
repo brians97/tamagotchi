@@ -14,16 +14,27 @@ Create a Class for Leopard Tech-O with attributes of boredom, hunger, and sleepi
 
 Add buttons for the main 3 attributes. When button is clicked the scale subtracts by 1 point. Add a Comment Box or button to display any given name the user may type. Have the text displayed and remove the comment box once Name is entered.
 
-## Bonus Add-Ons
 
 #### Animating the Pet
 
 Animate the pet to move left and right. 
 
-#### Death and Restart
+#### Death
 
-When the pet dies, add a transparent screen to refresh the browser screen with text displaying "Your pet has died, would you like to play again?" and add a button that will refresh the game and reset.
+When the pet dies stop the attributes and age from increasing with text saying "'Name of pet' has died."
 
 #### Styling
 
 Add a background image where your pet will live in. Maybe add a button to change scenery within 3 background images?
+
+
+
+## Bonus Add-Ons ToDO
+
+#### Morphing
+
+The ability to morph as your pet gets older.
+
+#### Restart
+
+Restart Screen when your pet dies.
