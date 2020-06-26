@@ -2,6 +2,9 @@
   box-sizing: border-box;
 }
 
+header {
+  width: 100%;
+}
 
 
 .pet-name button {
@@ -15,9 +18,55 @@
   color: gold;
 }
 
-.pet-image {
-  height: 15vh;
+
+.pet-container, #background {
+  background: url('https://cdn1.iconfinder.com/data/icons/retro-gadget-fill-outline/64/70_tamagotchi-digital-pet-toy-retro-512.png');
   position: relative;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+input {
+  box-sizing: border-box;
+  width: 25%;
+  border-radius: 4px;
+}
+
+.pet-container {
+  height: 300px; 
+}
+
+
+.pet-image {
+  background-size: contain;
+  top: 42%;
+  left: 44%;
+  height: 15vh;
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: bounce; 
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-100px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+  }  
 }
 
 .game-dasboard {
@@ -25,19 +74,21 @@
   padding: 0;
 }
 
-
+#boredom div {
+  display: inline-block;
+  width: 100px;
+  margin-right: 10px;
+}
 
 .buttons-container {
   margin-top: 20px;
 }
 
 .buttons-container button {
+  display: inline-block;
   width: 100px;
   margin-right: 10px;
-  text-align: center;
-  display: inline-block;
   font-size: 12px;
-  position: relative;
   cursor: pointer;
   border-radius: 20px;
   background-color: #1e2835;
