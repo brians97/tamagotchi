@@ -29,7 +29,7 @@ Add a background image where your pet will live in. Maybe add a button to change
 
 ## Wireframe
 
-![wireframe](./images/wireframe.png.HEIC)
+![wireframe](./images/wireframe.HEIC)
 
 ## Bonus Add-Ons ToDo
 
