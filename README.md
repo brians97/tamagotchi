@@ -17,7 +17,7 @@ Add buttons for the main 3 attributes. When button is clicked the scale subtract
 
 #### Animating the Pet
 
-Animate the pet to move left and right. 
+Animate the pet to move or bounce. 
 
 #### Death
 
@@ -27,11 +27,11 @@ When the pet dies stop the attributes and age from increasing with text saying "
 
 Add a background image where your pet will live in. Maybe add a button to change scenery within 3 background images?
 
-## Wireframs
+## Wireframe
 
 ![wireframe](./assets/wireframe.png.HEIC)
 
-## Bonus Add-Ons ToDO
+## Bonus Add-Ons ToDo
 
 #### Morphing
 
