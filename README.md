@@ -29,7 +29,7 @@ Add a background image where your pet will live in. Maybe add a button to change
 
 ## Wireframe
 
-![wireframe](./wireframe.png)
+![Wireframe Design](https://www.figma.com/file/EtXPLrgRZ73bkZnjURAg3T/Tamagotchi-Wireframe?node-id=0%3A1.png)
 
 ## Bonus Add-Ons ToDo
 
